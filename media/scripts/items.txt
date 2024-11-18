@@ -1,0 +1,26 @@
+/** This line is a comment. anything inside these brackets is ignored **/
+module items {
+    imports {
+        Base
+    }
+    /** Comments can be multiline like this
+        and can appear anywhere in the file, even in the
+        middle of a { block }
+    **/
+    item signalAmplifier
+    {
+        Type         = Normal,
+        DisplayName  = Radio Signal Amplifier,
+        Icon         = signalAmplifierIcon,
+        Weight       = 0.1,
+    }
+    recipe Configure Radio Signal Amplifier
+    {
+        keep Screwdriver,
+
+        Result:signalAmplifier,
+        Sound:SampleSound,
+        Time:100.0,
+        OnGiveXP:Give50ElectricalXP,
+    }
+}
